@@ -2,10 +2,9 @@
 
 namespace App\DTO;
 
-
 use App\Http\Requests\StoreUpdateSupport;
 
-class UptadeSupportDTO  
+class UpdateSupportDTO
 {
     public function __construct(
         public string $id,
@@ -14,7 +13,7 @@ class UptadeSupportDTO
         public string $body,
     ){}
 
-    public static function makeFromRequest(StoreUpdateSupport $request)
+    public static function makeFromRequest(StoreUpdateSupport $request): self
     {
         return new self(
             $request->id,

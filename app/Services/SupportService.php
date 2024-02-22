@@ -4,7 +4,7 @@ namespace App\Services;
 
 use stdClass;  // Importa a classe stdClass para ser usada como tipo de retorno em alguns métodos.
 use App\DTO\CreateSupportDTO;
-use App\DTO\UptadeSupportDTO;
+use App\DTO\UpdateSupportDTO;
 use App\Repositories\SupportRepositoryInterface;
 
 class SupportService
@@ -31,7 +31,7 @@ class SupportService
     }
 
     // Método para atualizar um elemento de suporte existente.
-    public function update(UptadeSupportDTO $dto): stdClass | null
+    public function update(UpdateSupportDTO $dto): stdClass | null
     {
         return $this->repository->update($dto);
     }
